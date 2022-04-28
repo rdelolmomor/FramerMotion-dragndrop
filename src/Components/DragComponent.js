@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Card, CardHeader, CardContent } from "@mui/material";
+import { randomColor } from "../js/helper";
 
-export default function DragComponent({ refComponent }) {
+export default function DragComponent({ refComponent, data }) {
   return (
     <motion.div
       className="Drag"
@@ -13,13 +14,13 @@ export default function DragComponent({ refComponent }) {
       <Card
         elevation={2}
         style={{
-          backgroundColor: "#00ffff",
+          backgroundColor: randomColor(),
           height: "100%",
           borderRadius: "10%"
         }}
       >
-        <CardHeader title="Titulo" />
-        <CardContent>Contenido</CardContent>
+        <CardHeader title={data.title} subheader={data.author} />
+        <CardContent>{data.content}</CardContent>
       </Card>
     </motion.div>
   );
