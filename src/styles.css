@@ -1,0 +1,12 @@
+.Container {
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  text-align: center;
+}
+.Drag {
+  width: 20%;
+  height: 15%;
+  border-radius: 10%;
+  background-color: #00ffff;
+}
